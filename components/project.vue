@@ -1,0 +1,40 @@
+<!--suppress XmlUnboundNsPrefix -->
+<template>
+  <v-card>
+    <v-img v-if="project.image"
+           :src="project.image"
+           aspect-ratio="2.75"
+    ></v-img>
+    <v-card-title primary-title>
+      <div>
+        <h3 class="headline mb-0">{{ project.title }}</h3>
+        <div> {{ project.description }}</div>
+      </div>
+    </v-card-title>
+
+    <v-card-actions>
+      <v-spacer></v-spacer>
+      <v-btn v-for="(link, linkIndex) in project.links" :key="`projectLink${linkIndex}`" :href="link.link">
+        {{link.title}}
+      </v-btn>
+      <v-btn flat color="orange">
+        <v-icon>chevron_right</v-icon>
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+</template>
+
+<script>
+  export default {
+    name: "Project",
+    props: {
+      project: {
+        type: Object
+      }
+    }
+  }
+</script>
+
+<style scoped>
+
+</style>
