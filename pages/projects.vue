@@ -19,9 +19,29 @@
         projects: [
           {
             title: "Homelab",
-            description: "Lorem ipsum",
+            description: "\n" +
+              "I currently run an enterprise infrastructure at home utilizing virtualization. It mainly serves me as a NAS and also provides continuous integration for my projects.\n" +
+              "\n" +
+              "A graphic representation of one of the network's iterations can be found here.\n" +
+              "\n" +
+              "A somewhat detailed explanation can be found on my website (in Bulgarian).",
+            image: "https://img.chilyashev.com/2019/04/HwHzzGC.png",
             technologies: [
-              "Nuxt.js", "Vuetify"
+              'VMware ESXi',
+              'pfSense', 'HAProxy', 'OpeNVPN', 'Let\'s Encrypt',
+              'Grafana', "InfluxDB", 'Telegraf', 'SNMP',
+              'Jenkins'
+            ],
+            links: [
+              {
+                link: "https://chilyashev.com/2019/06/lab/",
+                title: "Details",
+                icon: "github"
+              },
+              {
+                link: "https://img.chilyashev.com/2019/04/HwHzzGC.png",
+                title: "Diagram"
+              },
             ]
           },
           {
