@@ -9,18 +9,23 @@
       <div>
         <h3 class="headline mb-0">{{ project.title }}</h3>
         <div> {{ project.description }}</div>
+        <div>
+          <v-chip v-for="(tech, index) in project.technologies" :key="`tech${index}`">{{tech}}</v-chip>
+        </div>
       </div>
     </v-card-title>
 
-        <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn v-for="(link, linkIndex) in project.links" :key="`projectLink${linkIndex}`" :href="link.link">
-                {{link.title}}
-            </v-btn>
-            <v-btn flat color="orange">
-                <v-icon>chevron_right</v-icon>
-            </v-btn>
-        </v-card-actions>
+    <v-divider v-if="project.links !== undefined && project.links.length > 0"></v-divider>
+
+    <v-card-actions>
+      <v-spacer></v-spacer>
+      <v-btn v-for="(link, linkIndex) in project.links" :key="`projectLink${linkIndex}`" :href="link.link" flat>
+        {{link.title}}
+      </v-btn>
+      <!--<v-btn flat color="orange">-->
+      <!--<v-icon>chevron_right</v-icon>-->
+      <!--</v-btn>-->
+    </v-card-actions>
     </v-card>
 </template>
 
