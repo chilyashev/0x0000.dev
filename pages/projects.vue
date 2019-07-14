@@ -1,6 +1,6 @@
 <!--suppress HtmlUnknownTag -->
 <template>
-  <v-container>
+  <v-container grid-list-lg>
     <v-layout row wrap>
       <v-flex xs12 md4 v-for="(project, i) in projects" :key="`project${i}`">
         <Project :project="project"/>
@@ -18,6 +18,7 @@
       return {
         projects: [
           {
+              expand : false,
             title: "Homelab",
             description: "\n" +
               "I currently run an enterprise infrastructure at home utilizing virtualization. It mainly serves me as a NAS and also provides continuous integration for my projects.\n",
@@ -42,7 +43,7 @@
           },
           {
             title: "chilyashev.com",
-            description: "My personal blog since around 2006. It went through being self-hosted at home, then on multiple shared hostings. Currently hosted at SiteGround",
+            description: "My personal blog since around 2006. It went through being self-hosted at home, then on multiple shared hostings. Currently hosted at SiteGround.",
             image: 'https://i.imgur.com/yXHd10S.png',
             technologies: [
               "WordPress"
@@ -69,17 +70,17 @@
             ]
           },
           {
-            title: "0x0000",
+            title: "0x0000.dev",
             image: 'https://i.imgur.com/y1g2eut.png',
-            description: "This personal website.",
+            description: "This personal website. Currently in its early stages",
             technologies: [
               'Vue.js', 'Nuxt.js', 'Vuetify'
             ],
             links: [
-              {
+              /*{
                 link: 'https://github.com/chilyashev/0x0000.dev',
                 title: 'GitHub'
-              }
+              }*/
             ]
           },
           {

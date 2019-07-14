@@ -1,21 +1,7 @@
 <!--suppress HtmlUnknownTag -->
 <template>
     <v-app :dark="dark">
-        <v-container>
-            <Nav :links="links" :fixed="true"/>
-            <Nav :links="links"/>
-
-            <v-content>
-                <nuxt/>
-            </v-content>
-
-
-        </v-container>
-
-        <v-footer class="pa-3">
-            <v-spacer></v-spacer>
-            <div>&copy; {{ new Date().getFullYear() }} &mdash; Mihail Chilyashev</div>
-        </v-footer>
+        <nuxt/>
     </v-app>
 </template>
 
