@@ -10,9 +10,9 @@
         <v-toolbar-items class="hidden-sm-and-down">
             <v-btn v-for="(link, i) in links" :key="`menu${i}`" :to="link.to" flat>{{ link.title }}
             </v-btn>
-            <v-btn flat @click="dark = !dark">
+            <!--<v-btn flat @click="dark = !dark">
                 <v-icon>invert_colors</v-icon>
-            </v-btn>
+            </v-btn>-->
 
         </v-toolbar-items>
     </v-toolbar>

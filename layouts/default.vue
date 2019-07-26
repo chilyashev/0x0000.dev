@@ -41,11 +41,11 @@
                     {
                         title: "Projects",
                         to: "projects"
-                    },
+                    }/*,
                     {
                         title: "About",
                         to: "about"
-                    },
+                    },*/
                 ],
                 miniVariant: false,
                 right: true,

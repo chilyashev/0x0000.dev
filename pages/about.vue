@@ -5,8 +5,6 @@
             <h1>About</h1>
         </v-container>
         <v-container>
-            <p>Hi there,</p>
-
             <p>My name is Mihail Chilyashev and I spend most of my days writing software and solving the problems this
                 creates.</p>
             <p></p>
