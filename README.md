@@ -1,4 +1,4 @@
-# 0x0000.dev
+# [0x0000.dev](https://0x0000.dev)
 
 > A personal website
 
