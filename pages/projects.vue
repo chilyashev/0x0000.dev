@@ -10,9 +10,9 @@
 </template>
 
 <script>
-  import Project from '~/components/project';
+    import Project from '~/components/project';
 
-  export default {
+    export default {
     components: {Project},
     data() {
       return {
@@ -64,7 +64,7 @@
             ],
             links: [
               {
-                link: 'https://chilyashev.com',
+                  link: 'https://miskin.in',
                 title: 'Visit'
               }
             ]
