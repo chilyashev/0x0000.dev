@@ -77,10 +77,10 @@
               'Vue.js', 'Nuxt.js', 'Vuetify'
             ],
             links: [
-              /*{
+                {
                 link: 'https://github.com/chilyashev/0x0000.dev',
                 title: 'GitHub'
-              }*/
+                }
             ]
           },
           {
