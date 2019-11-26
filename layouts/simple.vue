@@ -2,20 +2,21 @@
 <template>
     <v-app :dark="dark">
         <nuxt/>
+        <v-footer class="font-weight-thin">
+            <v-spacer></v-spacer>
+            &copy; {{ new Date().getFullYear() }} &mdash; Mihail Chilyashev
+        </v-footer>
     </v-app>
 </template>
 
 <script>
-    import Nav from '../components/Nav'
-
     export default {
-        components: {Nav},
         data() {
             return {
                 clipped: false,
                 drawer: false,
                 fixed: false,
-                dark: false,
+                dark: true,
                 dense: false,
                 scrollPosition: 0,
                 invertedScroll: false,

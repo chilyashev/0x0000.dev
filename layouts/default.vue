@@ -2,14 +2,9 @@
 <template>
     <v-app :dark="dark">
         <v-container>
-            <Nav :links="links" :fixed="true"/>
-            <Nav :links="links"/>
-
             <v-content>
                 <nuxt/>
             </v-content>
-
-
         </v-container>
 
         <v-footer class="pa-3">
@@ -20,10 +15,8 @@
 </template>
 
 <script>
-    import Nav from '../components/Nav'
 
     export default {
-        components: {Nav},
         data() {
             return {
                 clipped: false,
