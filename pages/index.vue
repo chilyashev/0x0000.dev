@@ -2,14 +2,14 @@
 <template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
     <v-container fluid>
         <v-row>
-            <v-col cols="6" offset="3" align="center">
+            <v-col offset-md="3" md="6" cols="12" align="center">
                 <!--<img src="~/static/images/logo.png" alt="Logo" height="60">-->
                 <h1 class="display-2 font-weight-thin">Mihail Chilyashev</h1>
 
             </v-col>
         </v-row>
         <v-row class="mb-6">
-            <v-col cols="6" offset="3">
+            <v-col offset-md="3" md="6" cols="12">
                 <v-list color="transparent">
                     <v-list-item-group>
                         <v-list-item
@@ -35,23 +35,23 @@
         </v-row>
 
         <v-row>
-            <v-col cols="12" align="center">
+            <v-col offset-md="3" md="6" cols="12" align="center">
                 <h1 class=".display-2 font-weight-thin">Projects</h1>
             </v-col>
         </v-row>
         <v-row>
-            <v-col cols="6" offset="3">
+            <v-col offset-md="3" md="6" cols="12">
                 <ProjectList></ProjectList>
             </v-col>
         </v-row>
 
         <v-row>
-            <v-col cols="12" align="center">
+            <v-col offset-md="3" md="6" cols="12" align="center">
                 <h1 class=".display-2 font-weight-thin">Experience</h1>
             </v-col>
         </v-row>
         <v-row>
-            <v-col cols="6" offset="3">
+            <v-col offset-md="3" md="6" cols="12">
                 <v-timeline>
                     <v-timeline-item
                             v-for="(job, i) in jobs"
@@ -73,14 +73,19 @@
                             <v-row>
                                 <v-col>
                                     <v-chip small :color="`${job.color}`">{{job.title}}</v-chip>
-                                    <v-chip
-                                            v-for="(tech, index) in job.tech" :key="`tech${index}`"
-                                            class="my-2 mx-1"
-                                            small
-                                            :color="`${job.color} darken-${1+index % 5}`"
+                                    <v-chip-group
+                                            column
+                                            active-class="primary--text"
                                     >
-                                        {{tech}}
-                                    </v-chip>
+                                        <v-chip
+                                                v-for="(tech, index) in job.tech" :key="`tech${index}`"
+                                                class="my-2 mx-1"
+                                                small
+                                                :color="`${job.color} darken-${1+index % 5}`"
+                                        >
+                                            {{tech}}
+                                        </v-chip>
+                                    </v-chip-group>
                                 </v-col>
                             </v-row>
                         </div>
@@ -98,9 +103,14 @@
     export default {
         layout: 'simple',
         head: {
-            title: 'Home'
+            title: 'Mihail Chilyashev'
         },
         components: {ProjectList},
+        computed: {
+            breakpoint() {
+                return this.$vuetify.breakpoint.name
+            }
+        },
         data() {
             return {
                 bgUrl: backgroundUrl,

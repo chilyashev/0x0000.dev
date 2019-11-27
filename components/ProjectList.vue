@@ -25,10 +25,15 @@
             <v-list-item-content>
                 <v-list-item-title class="font-weight-bold">{{project.title}}</v-list-item-title>
                 <v-list-item-subtitle class="mb-2 mt-1">
-                    <v-chip v-for="(tech, index) in project.technologies" :key="`tech${index}`" x-small
-                            :color="`brown darken-${1+index % 5}`" class="mr-1">
-                        {{tech}}
-                    </v-chip>
+                    <v-chip-group
+                            column
+                            active-class="primary--text"
+                    >
+                        <v-chip v-for="(tech, index) in project.technologies" :key="`tech${index}`" x-small
+                                :color="`brown darken-${1+index % 5}`" class="mr-1">
+                            {{tech}}
+                        </v-chip>
+                    </v-chip-group>
                 </v-list-item-subtitle>
                 <p class="font-weight-light">{{project.description}}</p>
 
