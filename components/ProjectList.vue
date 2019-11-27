@@ -37,12 +37,14 @@
                 </v-list-item-subtitle>
                 <p class="font-weight-light">{{project.description}}</p>
 
-                <v-btn-toggle class="mt-2 mb-1">
+                <v-btn-toggle class="mt-2 mb-3" background-color="transparent">
                     <v-btn v-for="(link, linkIndex) in project.links"
                            :key="`projectLink${linkIndex}`"
                            :href="link.link"
                            small
-                           text>
+                           text
+                           color="primary"
+                    >
                         {{link.title}}
                     </v-btn>
                 </v-btn-toggle>
