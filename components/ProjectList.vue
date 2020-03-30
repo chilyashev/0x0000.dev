@@ -6,10 +6,12 @@
                 :key="i"
         >
             <v-list-item-icon>
+                <a :href='getLink(project)'>
                 <v-img
                         v-if="project.image !== undefined"
                         :src="project.image"
                         :alt="`${project.title} image`"
+                        
                         class="grey darken-4"
                         height="40"
                         width="40"
@@ -17,13 +19,23 @@
                 <v-img
                         v-else
                         :alt="`${project.title} image`"
+                        :href='getLink(project)'
                         class="grey darken-4"
                         height="40"
                         width="40"
                         aspect-ratio="2.75"></v-img>
+                </a>
             </v-list-item-icon>
             <v-list-item-content>
-                <v-list-item-title class="font-weight-bold">{{project.title}}</v-list-item-title>
+                <v-list-item-title class="font-weight-bold">
+                    <a 
+                    :href="getLink(project)" 
+                    v-if='project.links && project.links[0]'
+                     class="font-weight-bold project-link">{{project.title}}</a>
+                    <span v-else>
+                         {{project.title}}
+                    </span>
+                    </v-list-item-title>
                 <v-list-item-subtitle class="mb-2 mt-1">
                     <v-chip-group
                             column
@@ -265,10 +277,20 @@
                     },
                 ]
             }
+        },
+        methods: {
+            getLink: (project) => {
+                return (project.links && project.links[0]) ?
+                        project.links[0].link : ''
+            }
         }
     }
 </script>
 
 
-<style>
+<style lang="scss" scoped>
+.project-link {
+    text-decoration: none;
+    color: white;
+}
 </style>
