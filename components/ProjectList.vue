@@ -43,7 +43,7 @@
                            :href="link.link"
                            small
                            text
-                           color="primary"
+                           color="deep-orange "
                     >
                         {{link.title}}
                     </v-btn>
@@ -60,6 +60,31 @@
         data() {
             return {
                 projects: [
+                    {
+                        expand: false,
+                        title: "Да отида ли на работа днес?",
+                        description: "\n" +
+                            "A somewhat successful attempt to create a humourous website for people too lazy to go to work (in Bulgarian).\n",
+                        image: "https://img.chilyashev.com/2020/01/20200115dolr.png",
+                        technologies: [
+                            'Nuxt.js', 'Vue.js', 'Vuetify'
+                        ],
+                        links: [
+                            {
+                                link: "https://daotidalinarabota.eu/",
+                                title: "Visit",
+                                icon: "github"
+                            },
+                            {
+                                link: "https://github.com/chilyashev/dolr",
+                                title: "GitHub"
+                            },
+                            {
+                                link: "https://chilyashev.com/2020/01/%d0%b4%d0%b0-%d0%be%d1%82%d0%b8%d0%b4%d0%b0-%d0%bb%d0%b8-%d0%bd%d0%b0-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0-%d0%b4%d0%bd%d0%b5%d1%81/",
+                                title: "Article"
+                            },
+                        ]
+                    },
                     {
                         expand: false,
                         title: "Homelab",

@@ -79,7 +79,7 @@
                                     >
                                         <v-chip
                                                 v-for="(tech, index) in job.tech" :key="`tech${index}`"
-                                                class="my-2 mx-1"
+                                                class="my-2"
                                                 small
                                                 :color="`${job.color} darken-${1+index % 5}`"
                                         >
@@ -119,7 +119,7 @@
                         title: 'GitHub',
                         subtitle: '@chilyashev',
                         description: 'Open source contributions and private projects',
-                        icon: 'github-face',
+                        icon: 'git',
                         link: 'https://github.com/chilyashev',
                         color: '#4078c0'
                     },
@@ -147,7 +147,16 @@
                         //color: '#B23121'
                     },
                 ],
-                jobs: [
+                jobs: [{
+                        color: 'deep-orange',
+                        period: 'Dec 2019 - Present',
+                        title: 'Software Developer',
+                        place: 'Software Group',
+                        tech: [
+                            'Java 8', 'Spring Boot',
+                            'Casandra', 'MySQL', 'MS SQL Server', 'RabbitMQ'
+                        ]
+                    },
                     {
                         color: 'cyan',
                         period: 'Sep 2018 - Nov 2019',
