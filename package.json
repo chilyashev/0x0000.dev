@@ -12,12 +12,12 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.9.6",
-    "@nuxtjs/vuetify": "^1.11.0",
-    "nuxt": "^2.12.1"
+    "@nuxtjs/vuetify": "^1.12.3",
+    "nuxt": "^3.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.4",
     "stylus": "^0.54.7",
-    "stylus-loader": "^3.0.2"
+    "stylus-loader": "^7.1.0"
   }
 }
